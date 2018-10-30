@@ -4,7 +4,7 @@ This document documents the entire process of a project developed by golang from
 
 # Multiple Language Versions
 
-- [中文](/blob/master/zh/preface.md)
+- [中文](/zh/preface.md)
 
 
 
