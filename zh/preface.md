@@ -14,9 +14,10 @@
 
 - 2 语言基础
 
-- 2.1 hello word!
+- 2.1 [hello word!](/zh/2.1.md)
 
 
 
 
 
+参考资料：https://golang.org/doc/
