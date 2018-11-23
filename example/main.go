@@ -2,6 +2,12 @@ package main
 
 import "fmt"
 
+type Person struct {
+	//结构也是一种类型
+	Name string //定义struct的属性
+	Age  int
+}
+
 func main() {
 	//fmt.Printf("hello world!")
 	//var s []string
@@ -23,9 +29,13 @@ func main() {
 	//fmt.Println(p, b)
 	//var m map[string]int
 	//m := map[string]int{}
-	m := map[string]map[string]int{}
-	//m := make(map[string]int)
-
-	m["a"]["b"] = 23
-	fmt.Println(m)
+	//m := map[string]Person{}
+	//p := Person{Name: "jerry", Age: 12}
+	//m["ONE"] = p
+	//fmt.Println(m)
+	p := Person{Name: "jerry", Age: 12}
+	p.list()
+}
+func (p *Person) list() {
+	fmt.Println(p.Name)
 }
