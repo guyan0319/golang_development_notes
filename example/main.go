@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type Person struct {
 	//结构也是一种类型
@@ -35,6 +37,10 @@ func main() {
 	//fmt.Println(m)
 	p := Person{Name: "jerry", Age: 12}
 	p.list()
+	const name = "ok"
+	const name1 string = "ok"
+	fmt.Println(name)
+	fmt.Println(name1)
 }
 func (p *Person) list() {
 	fmt.Println(p.Name)

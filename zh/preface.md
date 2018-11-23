@@ -19,7 +19,8 @@
 - 2.2 [数组](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.2.md)
 - 2.3 [切片](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.3.md)
 - 2.4 [map](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.4.md)
-- 2.5[struct](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.5.md)
+- 2.5 [struct](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.5.md)
+- 2.6 [常量和变量](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.6.md)
 
 
 
