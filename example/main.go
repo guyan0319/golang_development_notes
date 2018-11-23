@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Printf("hello world!")
+	//fmt.Printf("hello world!")
 	//var s []string
 	//s := []string{"dd", "fsdf", "f"}
 	//	////s[3] = "dsf"
@@ -17,8 +17,15 @@ func main() {
 	//var slice1 []string = make([]string, 2)
 	//slice1 = append(slice1, "a", "fd", "fd", "fd", "fd", "fd", "fd", "fd", "fd", "fd", "fd", "fd", "fd")
 	//fmt.Println(slice1)
-	p := new([2]int)
-	p[0] = 22
-	b := make([]int, 10, 50)
-	fmt.Println(p, b)
+	//p := new([2]int)
+	//p[0] = 22
+	//b := make([]int, 0, 50)
+	//fmt.Println(p, b)
+	//var m map[string]int
+	//m := map[string]int{}
+	m := map[string]map[string]int{}
+	//m := make(map[string]int)
+
+	m["a"]["b"] = 23
+	fmt.Println(m)
 }
