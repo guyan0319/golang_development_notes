@@ -2,11 +2,8 @@ package main
 
 import "fmt"
 
-/*
- * author Zhiqiang Guo
- * datetime 2018/10/29 18:38
- */
-
 func main() {
 	fmt.Printf("hello world!")
+	a := []int{1, 2, 3, 4, 5}
+	fmt.Println(a)
 }
