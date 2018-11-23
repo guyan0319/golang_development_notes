@@ -14,7 +14,7 @@
 
 - 2 语言基础
 
-- 2.1 [hello word!](/zh/2.1.md)
+- 2.1 [hello word!](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.1.md)
 
 
 
