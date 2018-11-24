@@ -2,7 +2,7 @@
 
 
 
-- 1.[Go环境配置](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.0.md)
+- 1.[**Go环境配置**](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.0.md)
 
 - 1.1 [go安装](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.1.md)
 
@@ -12,7 +12,9 @@
 
 - 1.4 [工具](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.4.md)
 
-- 2 语言基础
+- 1.5 [版本控制](https://blog.csdn.net/guyan0319/article/details/81588316)
+
+- 2 **语言基础**
 
 - 2.1 [hello word!](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.1.md)
 
@@ -21,6 +23,7 @@
 - 2.4 [map](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.4.md)
 - 2.5 [struct](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.5.md)
 - 2.6 [常量和变量](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.6.md)
+- 2.7 流程控制
 
 
 
