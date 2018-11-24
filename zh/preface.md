@@ -3,27 +3,22 @@
 
 
 - 1.[**Go环境配置**](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.0.md)
-
 - 1.1 [go安装](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.1.md)
-
 - 1.2 [目录结构](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.2.md)
-
 - 1.3 [Go命令](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.3.md)
-
 - 1.4 [工具](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.4.md)
-
 - 1.5 [版本控制（dep）](https://blog.csdn.net/guyan0319/article/details/81588316)
-
 - 2 **语言基础**
-
 - 2.1 [hello word!](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.1.md)
-
 - 2.2 [数组](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.2.md)
 - 2.3 [切片](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.3.md)
 - 2.4 [map](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.4.md)
 - 2.5 [struct](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.5.md)
 - 2.6 [常量和变量](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.6.md)
 - 2.7 [流程控制](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.7.md)
+- 3 **字符处理**
+- 3.1[判断字符类型](https://github.com/guyan0319/golang_development_notes/blob/master/zh/3.1.md)
+- 3.2[类型转换](https://github.com/guyan0319/golang_development_notes/blob/master/zh/3.2.md)
 
 
 

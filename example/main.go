@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 )
 
 type Person struct {
@@ -35,12 +36,19 @@ func main() {
 	//p := Person{Name: "jerry", Age: 12}
 	//m["ONE"] = p
 	//fmt.Println(m)
-	p := Person{Name: "jerry", Age: 12}
-	p.list()
-	const name = "ok"
-	const name1 string = "ok"
-	fmt.Println(name)
-	fmt.Println(name1)
+	//p := Person{Name: "jerry", Age: 12}
+	//p.list()
+	//const name = "ok"
+	//const name1 string = "ok"
+	//fmt.Println(name)
+	//fmt.Println(name1)
+
+	i := int64(-2048)
+	fmt.Println(strconv.FormatInt(i, 2))  // -100000000000
+	fmt.Println(strconv.FormatInt(i, 8))  // -4000
+	fmt.Println(strconv.FormatInt(i, 10)) // -2048
+	fmt.Println(strconv.FormatInt(i, 16)) // -800
+	fmt.Println(strconv.FormatInt(i, 36)) // -1kw
 }
 func (p *Person) list() {
 	fmt.Println(p.Name)
