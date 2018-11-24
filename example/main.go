@@ -1,8 +1,8 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
-	"strconv"
 )
 
 type Person struct {
@@ -43,12 +43,14 @@ func main() {
 	//fmt.Println(name)
 	//fmt.Println(name1)
 
-	i := int64(-2048)
-	fmt.Println(strconv.FormatInt(i, 2))  // -100000000000
-	fmt.Println(strconv.FormatInt(i, 8))  // -4000
-	fmt.Println(strconv.FormatInt(i, 10)) // -2048
-	fmt.Println(strconv.FormatInt(i, 16)) // -800
-	fmt.Println(strconv.FormatInt(i, 36)) // -1kw
+	var data map[interface{}]interface{}
+	jsonStr := "{\"Name\":\"test\",\"Age\":19,\"1\":{\"info\":\"hello\"}}"
+	err := json.Unmarshal([]byte(jsonStr), &data)
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Println(data)
+
 }
 func (p *Person) list() {
 	fmt.Println(p.Name)

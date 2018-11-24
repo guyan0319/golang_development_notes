@@ -17,9 +17,10 @@
 - 2.6 [常量和变量](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.6.md)
 - 2.7 [流程控制](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.7.md)
 - 3 **字符处理**
-- 3.1[判断字符类型](https://github.com/guyan0319/golang_development_notes/blob/master/zh/3.1.md)
-- 3.2[类型转换](https://github.com/guyan0319/golang_development_notes/blob/master/zh/3.2.md)
+- 3.1 [判断字符类型](https://github.com/guyan0319/golang_development_notes/blob/master/zh/3.1.md)
+- 3.2 [类型转换](https://github.com/guyan0319/golang_development_notes/blob/master/zh/3.2.md)
+- 3.3 [json处理](https://github.com/guyan0319/golang_development_notes/blob/master/zh/3.3.md)
 
+**项目地址**：https://github.com/guyan0319/golang_development_notes
 
-
-参考资料：https://golang.org/doc/
+**参考资料**：https://golang.org/doc/
