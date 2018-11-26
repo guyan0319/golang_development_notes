@@ -43,15 +43,10 @@ func main() {
 	//fmt.Println(name)
 	//fmt.Println(name1)
 
-	var data map[interface{}]interface{}
-	jsonStr := "{\"Name\":\"test\",\"Age\":19,\"1\":{\"info\":\"hello\"}}"
-	err := json.Unmarshal([]byte(jsonStr), &data)
-	if err != nil {
-		fmt.Println(err)
+	arr := []string{"aaa", "bbb", "ccc"}
+	data, err := json.Marshal(arr)
+	if err == nil {
+		//data是[]byte类型，转化成string类型便于查看
+		fmt.Println(string(data))
 	}
-	fmt.Println(data)
-
-}
-func (p *Person) list() {
-	fmt.Println(p.Name)
 }
