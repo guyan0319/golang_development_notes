@@ -1,7 +1,8 @@
 package main
 
 import (
-	f "fmt"
+	"database/sql"
+	"log"
 )
 
 type Person struct {
@@ -11,46 +12,18 @@ type Person struct {
 }
 
 func main() {
-	//fmt.Printf("hello world!")
-	//var s []string
-	//s := []string{"dd", "fsdf", "f"}
-	//	////s[3] = "dsf"
-	//	//slice1 := s[1:3]
-	//	////slice1 := slice1[:1]
-	//	//slice1 = append(slice1, "aa", "bb")
-	//	//fmt.Println(slice1)
-	//s = append(s, "fsd")
-
-	//s := []string{"123", "123"} //切片
-	//var slice1 []string = make([]string, 2)
-	//slice1 = append(slice1, "a", "fd", "fd", "fd", "fd", "fd", "fd", "fd", "fd", "fd", "fd", "fd", "fd")
-	//fmt.Println(slice1)
-	//p := new([2]int)
-	//p[0] = 22
-	//b := make([]int, 0, 50)
-	//fmt.Println(p, b)
-	//var m map[string]int
-	//m := map[string]int{}
-	//m := map[string]Person{}
-	//p := Person{Name: "jerry", Age: 12}
-	//m["ONE"] = p
-	//fmt.Println(m)
-	//p := Person{Name: "jerry", Age: 12}
-	//p.list()
-	//const name = "ok"
-	//const name1 string = "ok"
-	//fmt.Println(name)
-	//fmt.Println(name1)
-
-	//arr := []string{"aaa", "bbb", "ccc"}
-	//data, err := json.Marshal(arr)
-	//if err == nil {
-	//	//data是[]byte类型，转化成string类型便于查看
-	//	fmt.Println(string(data))
-	//}
-	//fmt.Println(strings.Replace("ABAACEDF", "A", "a", 2))   // aBaACEDF
-	//fmt.Println(strings.Replace("ABAACEDF", "A", "a", 0-1)) // aBaaCEDF
-	//第四个参数小于0，表示所有的都替换
-	//fmt.Println(strings.ToLower("ABAACEDF"))
-	f.Println("fasd")
+	var dbconn *sql.DB
+	//fmt.Println(conf[operater])
+	dbconn, err := sql.Open(conf["type"], conf[operater])
+	//defer db.Close()
+	if err != nil {
+		log.Fatalln(err)
+	}
+	//用于设置闲置的连接数。如果 <= 0, 则没有空闲连接会被保留
+	dbconn.SetMaxIdleConns(0)
+	//用于设置最大打开的连接数,默认值为0表示不限制。
+	dbconn.SetMaxOpenConns(30)
+	if err := dbconn.Ping(); err != nil {
+		log.Fatalln(err)
+	}
 }
