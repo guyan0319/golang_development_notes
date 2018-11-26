@@ -1,8 +1,8 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
+	"strings"
 )
 
 type Person struct {
@@ -43,10 +43,14 @@ func main() {
 	//fmt.Println(name)
 	//fmt.Println(name1)
 
-	arr := []string{"aaa", "bbb", "ccc"}
-	data, err := json.Marshal(arr)
-	if err == nil {
-		//data是[]byte类型，转化成string类型便于查看
-		fmt.Println(string(data))
-	}
+	//arr := []string{"aaa", "bbb", "ccc"}
+	//data, err := json.Marshal(arr)
+	//if err == nil {
+	//	//data是[]byte类型，转化成string类型便于查看
+	//	fmt.Println(string(data))
+	//}
+	fmt.Println(strings.Replace("ABAACEDF", "A", "a", 2))   // aBaACEDF
+	fmt.Println(strings.Replace("ABAACEDF", "A", "a", 0-1)) // aBaaCEDF
+	//第四个参数小于0，表示所有的都替换
+	fmt.Println(strings.ToLower("ABAACEDF"))
 }
