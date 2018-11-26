@@ -21,6 +21,9 @@
 - 3.2 [类型转换](https://github.com/guyan0319/golang_development_notes/blob/master/zh/3.2.md)
 - 3.3 [json处理](https://github.com/guyan0319/golang_development_notes/blob/master/zh/3.3.md)
 - 3.4 [字符串处理](https://github.com/guyan0319/golang_development_notes/blob/master/zh/3.4.md)
+- 4 **包（package）**
+- 4.1 [自定义包（package）](https://blog.csdn.net/guyan0319/article/details/81909612)
+- 4.2  [import](https://github.com/guyan0319/golang_development_notes/blob/master/zh/4.2.md)
 
 **项目地址**：https://github.com/guyan0319/golang_development_notes
 
