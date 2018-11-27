@@ -4,6 +4,7 @@ import (
 	"database/sql"
 	"fmt"
 	_ "github.com/go-sql-driver/mysql"
+	"github.com/go-xorm/xorm"
 	"log"
 	"time"
 )
@@ -12,20 +13,8 @@ var db *sql.DB
 
 func main() {
 	var err error
-	db, err = sql.Open("mysql", "root:123456@tcp(127.0.0.1:3306)/testdb?charset=utf8mb4&parseTime=true&&loc=Local")
-	//parseTime是查询结果是否自动解析为时间。
-	//loc是MySQL的时区设置。
-	defer db.Close()
-	if err != nil {
-		log.Fatalln(err)
-	}
-	//用于设置闲置的连接数。如果 <= 0, 则没有空闲连接会被保留
-	db.SetMaxIdleConns(0)
-	//用于设置最大打开的连接数,默认值为0表示不限制。
-	db.SetMaxOpenConns(30)
-	if err := db.Ping(); err != nil {
-		log.Fatalln(err)
-	}
+	engine, err := xorm.NewEngine("mysql", "root:123456@tcp(127.0.0.1:3306)/testdb?charset=utf8mb4&parseTime=true&&loc=Local")
+
 	//插入
 	insert()
 	//更新
