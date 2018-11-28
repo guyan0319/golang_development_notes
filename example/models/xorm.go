@@ -27,14 +27,14 @@ func main() {
 		user = User{Name: "jerry" + strconv.Itoa(i), Ctime: ctime}
 		users = append(users, user)
 	}
-	//插入
-	//单条
+	//insert
+	//one
 	affected, err := engine.Insert(&user)
 	fmt.Println(affected)
-	////多条
+	////Multi
 	affected, err = engine.Insert(&users)
 	fmt.Println(affected)
-	//更新
+	//update
 
 	user = User{Name: "piter", Ctime: ctime}
 	affected, err = engine.ID(1).Update(&user)
@@ -42,8 +42,8 @@ func main() {
 
 	affected, err = engine.Update(&user, &User{Name: "jerry1"})
 	//UPDATE user SET ... Where name = ?
-	//查询
-	//单条
+	//search
+	//one
 	user = User{}
 	has, err := engine.Where("name = ?", "jerry0").Desc("id").Get(&user)
 	// SELECT * FROM user WHERE name = ? ORDER BY id DESC LIMIT 1
@@ -53,11 +53,11 @@ func main() {
 	has, err = engine.Where("id = ?", 2).Cols("name").Get(&name)
 	// SELECT name FROM user WHERE id = ?
 	fmt.Println(has)
-	//多条
+	//multi
 	name = "jerry0"
 	err = engine.Where("name = ?", name).And("id > 1").Limit(10, 0).Find(&users)
 	fmt.Println(users)
-	//删除
+	//delete
 	//delete()
 	user = User{}
 	//user = User{Name: "Henry", Ctime: ctime}
@@ -68,7 +68,7 @@ func main() {
 	//DELETE FROM user Where id = ?
 	fmt.Println(affected)
 
-	//事务
+	//Transaction
 	err = insert(engine)
 
 }

@@ -46,7 +46,7 @@ func insert() {
 	if err != nil {
 		return
 	}
-	rs, err := stmt.Exec("李四", ctime)
+	rs, err := stmt.Exec("jerry", ctime)
 	if err != nil {
 		return
 	}
