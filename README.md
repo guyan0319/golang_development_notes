@@ -17,3 +17,5 @@ This document documents the entire process of a project developed by golang from
 ## LICENSE
 
 BSD License <http://creativecommons.org/licenses/BSD/>
+
+Book License: [CC BY-SA 3.0 License](http://creativecommons.org/licenses/by-sa/3.0/)
