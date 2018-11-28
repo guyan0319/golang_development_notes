@@ -8,6 +8,8 @@ This document documents the entire process of a project developed by golang from
 
 
 
-# **Contact information**
+## Community
 
-**Email:** 115946156@qq.com
+
+
+![https://github.com/guyan0319/golang_development_notes/blob/master/images/qq.png?raw=true](https://github.com/guyan0319/golang_development_notes/blob/master/images/qq.png?raw=true)
