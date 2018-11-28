@@ -13,3 +13,7 @@ This document documents the entire process of a project developed by golang from
 
 
 ![https://github.com/guyan0319/golang_development_notes/blob/master/images/qq.png?raw=true](https://github.com/guyan0319/golang_development_notes/blob/master/images/qq.png?raw=true)
+
+## LICENSE
+
+BSD License <http://creativecommons.org/licenses/BSD/>
