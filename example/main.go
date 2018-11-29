@@ -1,30 +1,38 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
-	_ "github.com/go-sql-driver/mysql"
+	"io/ioutil"
+	"net/http"
 )
 
-type User struct {
-	Id    int64
-	Name  string
-	Ctime int64
-}
-
 func main() {
-	arr := []string{"hello", "apple", "python", "golang", "base", "peach", "pear"}
-	lang, err := json.Marshal(arr)
-	if err == nil {
-		fmt.Println("================array 到 json str==")
-		fmt.Println(string(lang))
+	client := &http.Client{}
+
+	request, err := http.NewRequest("GET", "http://www.baidu.com", nil)
+	if err != nil {
+		fmt.Println(err)
 	}
 
-	jsonStr := "[\"test\",\"testb\"]"
-	var dat []string
-	err = json.Unmarshal([]byte(jsonStr), &dat)
-	if err == nil {
-		fmt.Println(dat)
+	cookie := &http.Cookie{Name: "JERRY", Value: "dkfsf"}
+	request.AddCookie(cookie) //向request中添加cookie
+
+	//设置request的header
+	request.Header.Set("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8")
+
+	response, err := client.Do(request)
+	if err != nil {
+		fmt.Println(err)
+		return
 	}
-	fmt.Println(err)
+
+	defer response.Body.Close()
+	fmt.Println(response.StatusCode)
+	if response.StatusCode == 200 {
+		r, err := ioutil.ReadAll(response.Body)
+		if err != nil {
+			fmt.Println(err)
+		}
+		fmt.Println(string(r))
+	}
 }
