@@ -32,7 +32,8 @@
 - 7 **web 服务**
 - 7.1 [Go搭建一个简单web服务](https://github.com/guyan0319/golang_development_notes/blob/master/zh/7.1.md)
 - 7.2[net/http包使用及工作原理](https://github.com/guyan0319/golang_development_notes/blob/master/zh/7.2.md)
-- 7.3[http客户端（GET、POST、POSTFOM、DO）](https://github.com/guyan0319/golang_development_notes/blob/master/zh/7.3.md)
+- 7.3 [http客户端](https://github.com/guyan0319/golang_development_notes/blob/master/zh/7.3.md)
+- 7.4 [Request](https://github.com/guyan0319/golang_development_notes/blob/master/zh/7.4.md)
 
 **项目地址**：https://github.com/guyan0319/golang_development_notes
 

@@ -2,37 +2,26 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
+	"log"
 	"net/http"
 )
 
+func sayHelloHandler(w http.ResponseWriter, r *http.Request) {
+	query := r.URL.Query()
+	get_act := query["uid"][0]
+	fmt.Println(get_act)
+	//queryForm, err := url.ParseQuery(r.URL.RawQuery)
+	//fmt.Println(queryForm["uid"])
+	//if err == nil && len(queryForm["uid"]) > 0 {
+	//	fmt.Println(queryForm["uid"][0])
+	//}
+	//r.ParseForm()
+	//uid := r.Form["uid"]
+	//fmt.Println(uid)
+	//fmt.Fprintf(w, "Hello world!\n") //这个写入到w的是输出到客户端的
+}
+
 func main() {
-	client := &http.Client{}
-
-	request, err := http.NewRequest("GET", "http://www.baidu.com", nil)
-	if err != nil {
-		fmt.Println(err)
-	}
-
-	cookie := &http.Cookie{Name: "JERRY", Value: "dkfsf"}
-	request.AddCookie(cookie) //向request中添加cookie
-
-	//设置request的header
-	request.Header.Set("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8")
-
-	response, err := client.Do(request)
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-
-	defer response.Body.Close()
-	fmt.Println(response.StatusCode)
-	if response.StatusCode == 200 {
-		r, err := ioutil.ReadAll(response.Body)
-		if err != nil {
-			fmt.Println(err)
-		}
-		fmt.Println(string(r))
-	}
+	http.HandleFunc("/", sayHelloHandler) //	设置访问路由
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
