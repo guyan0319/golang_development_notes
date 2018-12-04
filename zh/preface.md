@@ -35,6 +35,8 @@
 - 7.3 [http客户端](https://github.com/guyan0319/golang_development_notes/blob/master/zh/7.3.md)
 - 7.4 [Request](https://github.com/guyan0319/golang_development_notes/blob/master/zh/7.4.md)
 - 7.5 [Cookie](https://github.com/guyan0319/golang_development_notes/blob/master/zh/7.5.md)
+- 7.6 [Session](https://github.com/guyan0319/golang_development_notes/blob/master/zh/7.6.md)
+- **缓存**
 
 **项目地址**：https://github.com/guyan0319/golang_development_notes
 
