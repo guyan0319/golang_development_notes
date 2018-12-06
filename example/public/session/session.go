@@ -33,24 +33,26 @@ type Session interface {
 
 type Manager struct {
 	cookieName  string
-	lock        sync.Mutex
-	provider    Provider
-	maxLifeTime int64
+	lock        sync.Mutex //互斥锁
+	provider    Provider   //存储session方式
+	maxLifeTime int64      //有效期
 }
 
+//实例化一个session管理器
 func NewSessionManager(provideName, cookieName string, maxLifeTime int64) (*Manager, error) {
 	provide, ok := provides[provideName]
 	if !ok {
-		return nil, fmt.Errorf("session: unknown provide %q (forgotten import?", provideName)
+		return nil, fmt.Errorf("session: unknown provide %q ", provideName)
 	}
 	return &Manager{cookieName: cookieName, provider: provide, maxLifeTime: maxLifeTime}, nil
 }
 
+//注册 由实现Provider接口的结构体调用
 func Register(name string, provide Provider) {
 	if provide == nil {
 		panic("session: Register provide is nil")
 	}
-	if _, dup := provides[name]; dup {
+	if _, ok := provides[name]; ok {
 		panic("session: Register called twice for provide " + name)
 	}
 	provides[name] = provide
@@ -58,29 +60,42 @@ func Register(name string, provide Provider) {
 
 var provides = make(map[string]Provider)
 
+//生成sessionId
 func (manager *Manager) sessionId() string {
 	b := make([]byte, 32)
 	if _, err := io.ReadFull(rand.Reader, b); err != nil {
 		return ""
 	}
+	//加密
 	return base64.URLEncoding.EncodeToString(b)
 }
 
+//判断当前请求的cookie中是否存在有效的session，存在返回，否则创建
 func (manager *Manager) SessionStart(w http.ResponseWriter, r *http.Request) (session Session) {
-	manager.lock.Lock()
+	manager.lock.Lock() //加锁
 	defer manager.lock.Unlock()
 	cookie, err := r.Cookie(manager.cookieName)
 	if err != nil || cookie.Value == "" {
+		//创建一个
 		sid := manager.sessionId()
 		session, _ = manager.provider.SessionInit(sid)
-		cookie := http.Cookie{Name: manager.cookieName, Value: url.QueryEscape(sid), Path: "/", HttpOnly: true, MaxAge: int(manager.maxLifeTime)}
+		cookie := http.Cookie{
+			Name:     manager.cookieName,
+			Value:    url.QueryEscape(sid), //转义特殊符号@#￥%+*-等
+			Path:     "/",
+			HttpOnly: true,
+			MaxAge:   int(manager.maxLifeTime),
+			Expires:  time.Now().Add(time.Duration(manager.maxLifeTime)),
+		}
 		http.SetCookie(w, &cookie)
 	} else {
-		sid, _ := url.QueryUnescape(cookie.Value)
+		sid, _ := url.QueryUnescape(cookie.Value) //反转义特殊符号
 		session, _ = manager.provider.SessionRead(sid)
 	}
 	return session
 }
+
+//销毁session 同时删除cookie
 func (manager *Manager) SessionDestroy(w http.ResponseWriter, r *http.Request) {
 	cookie, err := r.Cookie(manager.cookieName)
 	if err != nil || cookie.Value == "" {
@@ -88,10 +103,15 @@ func (manager *Manager) SessionDestroy(w http.ResponseWriter, r *http.Request) {
 	} else {
 		manager.lock.Lock()
 		defer manager.lock.Unlock()
-		manager.provider.SessionDestroy(cookie.Value)
+		sid, _ := url.QueryUnescape(cookie.Value)
+		manager.provider.SessionDestroy(sid)
 		expiration := time.Now()
-		cookie := http.Cookie{Name: manager.cookieName, Path: "/",
-			HttpOnly: true, Expires: expiration, MaxAge: -1}
+		cookie := http.Cookie{
+			Name:     manager.cookieName,
+			Path:     "/",
+			HttpOnly: true,
+			Expires:  expiration,
+			MaxAge:   -1}
 		http.SetCookie(w, &cookie)
 	}
 }
