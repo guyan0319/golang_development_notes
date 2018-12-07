@@ -41,9 +41,15 @@ func login(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("set session")
 	}
 }
+func loginOut(w http.ResponseWriter, r *http.Request) {
+	//销毁
+	globalSessions.SessionDestroy(w, r)
+	fmt.Println("session destroy")
+}
 
 func main() {
 	http.HandleFunc("/", sayHelloHandler) //	设置访问路由
 	http.HandleFunc("/login", login)
+	http.HandleFunc("/loginout", loginOut) //销毁
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }

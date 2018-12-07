@@ -86,6 +86,9 @@ func (manager *Manager) SessionStart(w http.ResponseWriter, r *http.Request) (se
 			HttpOnly: true,
 			MaxAge:   int(manager.maxLifeTime),
 			Expires:  time.Now().Add(time.Duration(manager.maxLifeTime)),
+			//MaxAge和Expires都可以设置cookie持久化时的过期时长，Expires是老式的过期方法，
+			// 如果可以，应该使用MaxAge设置过期时间，但有些老版本的浏览器不支持MaxAge。
+			// 如果要支持所有浏览器，要么使用Expires，要么同时使用MaxAge和Expires。
 		}
 		http.SetCookie(w, &cookie)
 	} else {

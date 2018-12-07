@@ -11,7 +11,7 @@ var pder = &FromMemory{list: list.New()}
 
 func init() {
 	pder.sessions = make(map[string]*list.Element, 0)
-	//注册
+	//注册  memory 调用的时候一定有一致
 	session.Register("memory", pder)
 }
 
