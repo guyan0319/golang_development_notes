@@ -1,55 +1,30 @@
 package main
 
 import (
-	_ "example/example/public/memory"
-	"example/example/public/session"
 	"fmt"
-	"github.com/aliyun/alibaba-cloud-sdk-go/sdk/log"
-	"net/http"
+	"reflect"
 )
 
-var globalSessions *session.Manager
-
-func init() {
-	var err error
-	globalSessions, err = session.NewSessionManager("memory", "goSessionid", 3600)
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-	go globalSessions.GC()
-	fmt.Println("fd")
+type User struct {
+	Id   int
+	Name string
+	Age  int
+}
+type Manager struct {
+	User  //反射会将匿名字段作为一个独立字段来处理
+	Title string
 }
 
-func sayHelloHandler(w http.ResponseWriter, r *http.Request) {
-
-	cookie, err := r.Cookie("name")
-	if err == nil {
-		fmt.Println(cookie.Value)
-		fmt.Println(cookie.Domain)
-		fmt.Println(cookie.Expires)
-	}
-	//fmt.Fprintf(w, "Hello world!\n") //这个写入到w的是输出到客户端的
-}
-func login(w http.ResponseWriter, r *http.Request) {
-	sess := globalSessions.SessionStart(w, r)
-	val := sess.Get("username")
-	if val != nil {
-		fmt.Println(val)
-	} else {
-		sess.Set("username", "jerry")
-		fmt.Println("set session")
-	}
-}
-func loginOut(w http.ResponseWriter, r *http.Request) {
-	//销毁
-	globalSessions.SessionDestroy(w, r)
-	fmt.Println("session destroy")
+func (u User) Login() {
+	fmt.Println("login")
 }
 
 func main() {
-	http.HandleFunc("/", sayHelloHandler) //	设置访问路由
-	http.HandleFunc("/login", login)
-	http.HandleFunc("/loginout", loginOut) //销毁
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	m := Manager{User: User{1, "Jack", 12}, Title: "123"}
+	t := reflect.TypeOf(m)
+	fmt.Printf("%#v\n", t.Field(0))                   //#号会将reflect的struct的详情页打印出来，可以看出来这是一个匿名字段
+	fmt.Printf("%#v \n", t.FieldByIndex([]int{0, 0})) //此时 我们就可以将User当中的ID取出来,这里面需要传进方法中的是一个int类型的slice，User相对于manager索引是0，id相对于User索引也是0
+	fmt.Printf("%v \n", t.FieldByIndex([]int{0, 1}))
+	v := reflect.ValueOf(m)
+	fmt.Printf("%#v\n", v.Field(0))
 }
