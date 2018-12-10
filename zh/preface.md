@@ -39,6 +39,7 @@
 - 7.5 [Cookie](https://github.com/guyan0319/golang_development_notes/blob/master/zh/7.5.md)
 - 7.6 [Session](https://github.com/guyan0319/golang_development_notes/blob/master/zh/7.6.md)
 - **缓存**
+- 8.1 [Go Redis连接池](https://github.com/guyan0319/golang_development_notes/blob/master/zh/8.1.md)
 
 **项目地址**：https://github.com/guyan0319/golang_development_notes
 
