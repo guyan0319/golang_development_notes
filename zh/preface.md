@@ -16,6 +16,8 @@
 - 2.5 [struct](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.5.md)
 - 2.6 [常量和变量](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.6.md)
 - 2.7 [流程控制](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.7.md)
+- 2.8 [Go 反射reflect](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.8.md)
+- 2.9[Go 双向链表](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.9.md)
 - 3 **字符处理**
 - 3.1 [判断字符类型](https://github.com/guyan0319/golang_development_notes/blob/master/zh/3.1.md)
 - 3.2 [类型转换](https://github.com/guyan0319/golang_development_notes/blob/master/zh/3.2.md)

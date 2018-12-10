@@ -1,35 +1,26 @@
 package main
 
 import (
+	"container/list"
 	"fmt"
-	"reflect"
 )
 
-type User struct {
-	Id   int
-	Name string
-	Age  int
-}
-
-func (u User) Login(name string) {
-	fmt.Println("login" + name)
-}
-func (u User) LoginOut(name, name1 string) {
-	fmt.Println("loginout" + name)
-	fmt.Println("loginout" + name1)
-}
-
 func main() {
-	user := User{Id: 1, Name: "jerry", Age: 29}
-	val := reflect.ValueOf(&user) //获取Value类型，也可以使用reflect.ValueOf(&user).Elem()
+	l := list.New()
+	//末尾插入值为1的元素，并返回该元素。
+	v1 := l.PushBack(1)
+	//首部插入值为2的元素，并返回该元素
+	v2 := l.PushFront(2)
+	//在元素v1前插入3
+	l.InsertBefore(3, v2)
+	//在元素v1后插入4
+	l.InsertAfter(4, v1)
 
-	params := make([]reflect.Value, 1)
-	params[0] = reflect.ValueOf("herry")
-	val.MethodByName("Login").Call(params) //通过名称调用方法
-	paramstwo := make([]reflect.Value, 2)
-	paramstwo[0] = reflect.ValueOf("herry")
-	paramstwo[1] = reflect.ValueOf("jack")
-	fmt.Println(params)
-	val.Method(1).Call(paramstwo) //通过方法索引调用，paramstwo 含有两个参数
-
+	fmt.Printf("len: %v\n", l.Len())
+	fmt.Printf("first: %#v\n", l.Front())
+	fmt.Printf("second: %#v\n", l.Front().Next())
+	// 遍历列表并打印其内容。
+	for e := l.Front(); e != nil; e = e.Next() {
+		fmt.Println(e.Value)
+	}
 }
