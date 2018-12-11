@@ -17,7 +17,8 @@
 - 2.6 [常量和变量](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.6.md)
 - 2.7 [流程控制](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.7.md)
 - 2.8 [Go 反射reflect](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.8.md)
-- 2.9[Go 双向链表](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.9.md)
+- 2.9 [Go 双向链表](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.9.md)
+- 2.10 [Go 指针](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.10.md)
 - 3 **字符处理**
 - 3.1 [判断字符类型](https://github.com/guyan0319/golang_development_notes/blob/master/zh/3.1.md)
 - 3.2 [类型转换](https://github.com/guyan0319/golang_development_notes/blob/master/zh/3.2.md)
@@ -40,6 +41,8 @@
 - 7.6 [Session](https://github.com/guyan0319/golang_development_notes/blob/master/zh/7.6.md)
 - **缓存**
 - 8.1 [Go Redis连接池](https://github.com/guyan0319/golang_development_notes/blob/master/zh/8.1.md)
+- Go高级编程
+- 
 
 **项目地址**：https://github.com/guyan0319/golang_development_notes
 
