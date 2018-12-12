@@ -8,6 +8,7 @@
 - 1.3 [Go命令](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.3.md)
 - 1.4 [工具](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.4.md)
 - 1.5 [版本控制（dep）](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.5.md)
+- 1.6 [Go 各版本特性](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.6.md)
 - 2 **语言基础**
 - 2.1 [hello word!](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.1.md)
 - 2.2 [数组](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.2.md)
