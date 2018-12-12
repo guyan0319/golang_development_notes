@@ -1,4 +1,4 @@
-## 1   Golang 开发笔记
+## g1   Golang 开发笔记
 
 
 
@@ -6,11 +6,12 @@
 - 1.1 [Go安装](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.1.md)
 - 1.2 [目录结构](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.2.md)
 - 1.3 [Go命令](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.3.md)
-- 1.4 [工具](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.4.md)
+- 1.4 [开发工具](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.4.md)
 - 1.5 [版本控制（dep）](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.5.md)
 - 1.6 [Go 各版本特性](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.6.md)
+- 1.7 [调试工具Delve](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.7.md)
 - 2 **语言基础**
-- 2.1 [hello word!](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.1.md)
+- 2.1 [hello word!](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.1.md)z
 - 2.2 [数组](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.2.md)
 - 2.3 [切片](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.3.md)
 - 2.4 [map](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.4.md)
