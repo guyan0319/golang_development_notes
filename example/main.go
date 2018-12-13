@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	//_ "net/http/pprof"
+	_ "net/http/pprof"
 )
 
 func sayHelloHandler(w http.ResponseWriter, r *http.Request) {
