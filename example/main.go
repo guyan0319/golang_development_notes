@@ -1,20 +1,28 @@
 package main
 
 import (
-	"log"
+	"github.com/sirupsen/logrus"
 	"os"
 )
 
+// Create a new instance of the logger. You can have any number of instances.
+var log = logrus.New()
+
 func main() {
-	// 按照所需读写权限创建文件
-	f, err := os.OpenFile("filename.log", os.O_WRONLY|os.O_CREATE|os.O_APPEND, 0644)
-	if err != nil {
-		log.Fatal(err)
+	// The API for setting attributes is a little different than the package level
+	// exported logger. See Godoc.
+	log.Out = os.Stdout
+
+	//You could set this to any `io.Writer` such as a file
+	file, err := os.OpenFile("logrus.log", os.O_CREATE|os.O_WRONLY, 0666)
+	if err == nil {
+		log.Out = file
+	} else {
+		log.Info("Failed to log to file, using default stderr")
 	}
-	// 完成后延迟关闭，而不是习惯!
-	//defer f.Close()
-	//设置日志输出到 f
-	log.SetOutput(f)
-	//测试用例
-	log.Println("check to make sure it works")
+
+	log.WithFields(logrus.Fields{
+		"animal": "walrus",
+		"size":   10,
+	}).Info("A group of walrus emerges from the ocean")
 }
