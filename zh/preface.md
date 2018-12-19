@@ -47,6 +47,7 @@
 - 8.1 [Go Redis连接池](https://github.com/guyan0319/golang_development_notes/blob/master/zh/8.1.md)
 - Go高级编程
 - 9.1 [函数可变数量参数传参](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.1.md)
+- 9.2 [深入理解nil](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.2.md)
 
 **项目地址**：https://github.com/guyan0319/golang_development_notes
 
