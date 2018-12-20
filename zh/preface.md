@@ -48,6 +48,7 @@
 - Go高级编程
 - 9.1 [函数可变数量参数传参](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.1.md)
 - 9.2 [深入理解nil](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.2.md)
+- 9.3 [指针内存分配详解](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.3.md)
 
 **项目地址**：https://github.com/guyan0319/golang_development_notes
 

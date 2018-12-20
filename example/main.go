@@ -1,9 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	nil := 123
-	fmt.Println(nil) // 123
-
+	var a uint8
+	a = 1
+	fmt.Printf("%p\n", &a)
 }
