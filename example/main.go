@@ -1,11 +1,12 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	var a uint8
-	a = 1
-	fmt.Printf("%p\n", &a)
+	p := 5
+	change(&p)
+	fmt.Println("p=", p)
+}
+func change(p *int) {
+	*p = 0
 }
