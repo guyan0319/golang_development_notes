@@ -1,4 +1,4 @@
-## g1   Golang 开发笔记
+##    Golang 开发笔记
 
 
 
@@ -42,7 +42,8 @@
 - 7.4 [Request](https://github.com/guyan0319/golang_development_notes/blob/master/zh/7.4.md)
 - 7.5 [Cookie](https://github.com/guyan0319/golang_development_notes/blob/master/zh/7.5.md)
 - 7.6 [Session](https://github.com/guyan0319/golang_development_notes/blob/master/zh/7.6.md)
-- 7.7[Go 日志](https://github.com/guyan0319/golang_development_notes/blob/master/zh/7.7.md)
+- 7.7 [Go 日志 ](https://github.com/guyan0319/golang_development_notes/blob/master/zh/7.7.md)
+- 7.8  [处理文件](https://github.com/guyan0319/golang_development_notes/blob/master/zh/7.8.md)
 - **缓存**
 - 8.1 [Go Redis连接池](https://github.com/guyan0319/golang_development_notes/blob/master/zh/8.1.md)
 - **Go高级编程**
