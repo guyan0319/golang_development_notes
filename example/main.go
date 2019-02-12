@@ -2,30 +2,25 @@ package main
 
 import (
 	"fmt"
-	"io"
-	"os"
+	"log"
+	"net/http"
 )
 
+func sayHelloHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Println("path", r.URL.Path)
+	fmt.Println("scheme", r.URL.Scheme)
+	fmt.Fprintf(w, "Hello world!\n") //这个写入到w的是输出到客户端的
+	panic("ffff")
+}
+func sayHelloHandlerapi(w http.ResponseWriter, r *http.Request) {
+	fmt.Println("path", r.URL.Path)
+	fmt.Println("scheme", r.URL.Scheme)
+	fmt.Fprintf(w, "Hello world!\n") //这个写入到w的是输出到客户端的
+	//panic("ffff")
+}
+
 func main() {
-
-	file := "D:/gopath/src/example/example/log.txt"
-	f, err := os.Open(file)
-	if err != nil {
-		panic(err)
-	}
-	defer f.Close()
-
-	chunks := make([]byte, 0)
-	buf := make([]byte, 1024)
-	for {
-		n, err := f.Read(buf)
-		if err != nil && err != io.EOF {
-			panic(err)
-		}
-		if 0 == n {
-			break
-		}
-		chunks = append(chunks, buf[:n]...)
-	}
-	fmt.Println(string(chunks))
+	http.HandleFunc("/", sayHelloHandler)       //	设置访问路由
+	http.HandleFunc("/api", sayHelloHandlerapi) //	设置访问路由
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
