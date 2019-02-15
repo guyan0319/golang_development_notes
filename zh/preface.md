@@ -102,6 +102,8 @@
 
 - 9.5 [Go  goroutine理解](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.5.md)
 
+- 9.6 [GO GC 垃圾回收机制](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.6.md)
+
   
 
 **项目地址**：https://github.com/guyan0319/golang_development_notes
