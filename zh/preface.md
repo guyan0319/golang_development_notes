@@ -52,6 +52,8 @@
 
 - 3.4 [字符串处理](https://github.com/guyan0319/golang_development_notes/blob/master/zh/3.4.md)
 
+- 3.5 [GO 正则表达式](https://github.com/guyan0319/golang_development_notes/blob/master/zh/3.5.md)
+
 - 4 **包（package）**
 
 - 4.1 [自定义包（package）](https://github.com/guyan0319/golang_development_notes/blob/master/zh/4.1.md)
@@ -103,6 +105,8 @@
 - 9.5 [Go  goroutine理解](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.5.md)
 
 - 9.6 [GO GC 垃圾回收机制](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.6.md)
+
+  
 
   
 
