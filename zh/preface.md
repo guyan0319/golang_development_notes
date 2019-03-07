@@ -20,6 +20,8 @@
 
 - 1.8  [Go 性能测试工具PProf](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.8.md)
 
+- 1.9  [Go  单元测试和性能测试](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.9.md)
+
 - 2 **语言基础**
 
 - 2.1 [hello word!](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.1.md)
