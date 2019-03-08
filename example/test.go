@@ -67,6 +67,7 @@ func main() {
 	var x int64
 	fmt.Println(v.FieldByName("Age").OverflowInt(x)) //如果v持有值的类型不能溢出的表示x，会返回真，如果v的kind不是int int8-int64会panic false
 
+	//以下这种方式效率比较高些
 	sv := reflect.TypeOf(&u).Elem()
 	field, _ := sv.FieldByName("Name")
 	field1Ptr := uintptr(unsafe.Pointer(&u)) + field.Offset
