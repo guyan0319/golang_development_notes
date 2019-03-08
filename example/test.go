@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"reflect"
+	"unsafe"
 )
 
 type User struct {
@@ -65,4 +66,10 @@ func main() {
 	fmt.Println(pp.FieldByName("Name").String())    //返回v持有的值的字符串表示，如果v的值不是string也不会panic  newname
 	var x int64
 	fmt.Println(v.FieldByName("Age").OverflowInt(x)) //如果v持有值的类型不能溢出的表示x，会返回真，如果v的kind不是int int8-int64会panic false
+
+	sv := reflect.TypeOf(&u).Elem()
+	field, _ := sv.FieldByName("Name")
+	field1Ptr := uintptr(unsafe.Pointer(&u)) + field.Offset
+	*((*string)(unsafe.Pointer(field1Ptr))) = "Jerry"
+	fmt.Println(u)
 }
