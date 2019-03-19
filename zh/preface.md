@@ -108,6 +108,8 @@
 
 - 9.6 [GO GC 垃圾回收机制](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.6.md)
 
+- 9.7 [GO 单例模式](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.7.md)
+
   
 
   
