@@ -1,9 +1,10 @@
 package main
 
 import (
+	"example/example/public/goinject"
 	"fmt"
+	_ "github.com/go-sql-driver/mysql"
 	"os"
-	"golang_development_notes/example/public/goinject"
 )
 
 type DBEngine struct {
@@ -33,6 +34,7 @@ func NewCacheEngine() *CacheEngine {
 
 type UserDB struct {
 	Db    *DBEngine    `inject:""`
+	Db1   *DBEngine    `inject:""`
 	Cache *CacheEngine `inject:""`
 }
 
@@ -50,26 +52,27 @@ type ItemService struct {
 }
 
 type App struct {
-	User *UserService `inject:"fdsaf"`
+	User *UserService `inject:""`
 	Item *ItemService `inject:""`
 }
 
 func (a *App) Render() string {
 	return fmt.Sprintf(
 		"db name is %s ,cache name is %s.",
-		a.User.Db.Db.Name(),
+		a.User.Db.Db.Key,
 		a.Item.Db.Cache.Name(),
 	)
 }
 func main() {
 
-	//db := NewDBEngine()
+	db := NewDBEngine()
 	//cache := NewCacheEngine()
 	var g goinject.Graph
+
 	var app App
 	err := g.Provider(
 		&goinject.Object{Value: &app},
-		//&goinject.Object{Value: db},
+		&goinject.Object{Value: db},
 	)
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err)
@@ -80,6 +83,7 @@ func main() {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
 	}
-	//
-	//fmt.Println(app.Render())
+
+	fmt.Println(app.Render())
+
 }
