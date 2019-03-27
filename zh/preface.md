@@ -44,6 +44,8 @@
 
 - 2.10 [Go 指针](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.10.md)
 
+  
+
 - 3 **字符处理**
 
 - 3.1 [判断字符类型](https://github.com/guyan0319/golang_development_notes/blob/master/zh/3.1.md)
@@ -109,6 +111,8 @@
 - 9.6 [GO GC 垃圾回收机制](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.6.md)
 
 - 9.7 [GO 单例模式](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.7.md)
+
+- 9.8 [Go 匿名函数和闭包](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.8.md)
 
   
 
