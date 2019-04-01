@@ -6,6 +6,8 @@ import (
 )
 
 func main() {
+
+	go fmt.Println("fasdf")
 	c := 0
 	start := time.Now()
 	for i := 1; i < 2000000000; i++ {
