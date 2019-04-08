@@ -44,8 +44,6 @@
 
 - 2.10 [Go 指针](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.10.md)
 
-  
-
 - 3 **字符处理**
 
 - 3.1 [判断字符类型](https://github.com/guyan0319/golang_development_notes/blob/master/zh/3.1.md)
@@ -63,6 +61,8 @@
 - 4.1 [自定义包（package）](https://github.com/guyan0319/golang_development_notes/blob/master/zh/4.1.md)
 
 - 4.2  [import](https://github.com/guyan0319/golang_development_notes/blob/master/zh/4.2.md)
+
+- 4.3 [模板(text/template)](https://github.com/guyan0319/golang_development_notes/blob/master/zh/4.3.md)
 
 - 5 **数据库**
 
@@ -95,6 +95,8 @@
 - **缓存**
 
 - 8.1 [Go Redis连接池](https://github.com/guyan0319/golang_development_notes/blob/master/zh/8.1.md)
+
+  
 
 - **Go高级编程**
 
