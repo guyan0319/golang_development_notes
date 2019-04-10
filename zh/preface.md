@@ -92,6 +92,8 @@
 
 - 7.8  [处理文件](https://github.com/guyan0319/golang_development_notes/blob/master/zh/7.8.md)
 
+- 7.9 [中间件(Middleware )](https://github.com/guyan0319/golang_development_notes/blob/master/zh/7.9.md)
+
 - **缓存**
 
 - 8.1 [Go Redis连接池](https://github.com/guyan0319/golang_development_notes/blob/master/zh/8.1.md)
