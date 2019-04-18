@@ -44,6 +44,8 @@
 
 - 2.10 [Go 指针](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.10.md)
 
+- 2.11 [new和make的区别](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.11.md)
+
 - 3 **字符处理**
 
 - 3.1 [判断字符类型](https://github.com/guyan0319/golang_development_notes/blob/master/zh/3.1.md)
