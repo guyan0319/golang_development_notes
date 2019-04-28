@@ -1,19 +1,23 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
+
+func goRoutineA(a <-chan string) {
+	(*a).qcount
+	val := <-a
+	fmt.Println("goRoutineA received the data", val)
+}
+func goRoutineB(a chan string, data string) {
+	a <- data
+	fmt.Println("goRoutineB send the data", data)
+}
 
 func main() {
-	//trace.Start(os.Stderr)
-	//defer trace.Stop()
-	// create new channel of type int
-	ch := make(chan int, 1)
-	fmt.Printf("%v\n", &ch)
-	fmt.Printf("%+v\n", ch)
-	// start new anonymous goroutine
-	go func() {
-		// send 42 to channel
-		ch <- 42
-	}()
-	// read from channel
-	<-ch
+	ch := make(chan string)
+	go goRoutineB(ch, "hello")
+	go goRoutineA(ch)
+	time.Sleep(time.Second * 1)
 }
