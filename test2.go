@@ -3,10 +3,11 @@ package main
 import (
 	"fmt"
 	"time"
+	"reflect"
 )
 
 func goRoutineA(a <-chan string) {
-	(*a).qcount
+
 	val := <-a
 	fmt.Println("goRoutineA received the data", val)
 }
@@ -16,7 +17,11 @@ func goRoutineB(a chan string, data string) {
 }
 
 func main() {
+
+
 	ch := make(chan string)
+	a:= reflect.MakeChan(ch,10000)
+	fmt.Println(a)
 	go goRoutineB(ch, "hello")
 	go goRoutineA(ch)
 	time.Sleep(time.Second * 1)
