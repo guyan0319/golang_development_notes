@@ -4,6 +4,7 @@ import (
 	"example/example/public"
 	"fmt"
 	"reflect"
+	"runtime"
 )
 
 type Users struct {
@@ -26,20 +27,20 @@ func (u Users) Login() {
 }
 
 func main() {
-	//ch := make(chan string, 3)
-	//fmt.Println(ch)
-	//vv := runtime.Getchan()
-	//v := reflect.ValueOf(vv)
-	//
-	//public.Examiner(v, 0)
+	ch := make(chan string, 3)
+	fmt.Println(ch)
+	vv := runtime.Getchan()
+	v := reflect.ValueOf(vv)
+
+	public.Explicit(v, 0)
 	//fmt.Printf("%+v", v)
-	m := map[int]string{1: "abc"}
-	s := &Sfrom{Area: "beijing"}
-	i := Info{Detail: "detail"}
-	u := &Users{Id: 12, Market: m, Ext: i, Source: s}
-	//t := reflect.TypeOf(u)
-	v := reflect.ValueOf(u)
-	public.Examiner(v, 0)
+	//m := map[int]string{1: "abc"}
+	//s := &Sfrom{Area: "beijing"}
+	//i := Info{Detail: "detail"}
+	//u := &Users{Id: 12, Market: m, Ext: i, Source: s}
+	////t := reflect.TypeOf(u)
+	//v := reflect.ValueOf(u)
+	//public.Explicit(v, 0)
 	//fmt.Printf("%+v\n", v)
 
 	//t := reflect.TypeOf(ch)
