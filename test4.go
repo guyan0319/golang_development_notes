@@ -21,7 +21,7 @@ func main() {
 	t := reflect.TypeOf(u) //反射出一个interface{}的类型,main.User
 	v := reflect.ValueOf(u)
 	pv := reflect.ValueOf(&u)
-
+	// 遍历TypeOf 类型
 	for i := 0; i < t.NumField(); i++ { //通过索引来取得它的所有字段，这里通过t.NumField来获取它多拥有的字段数量，同时来决定循环的次数
 		f := t.Field(i)               //通过这个i作为它的索引，从0开始来取得它的字段
 		val := v.Field(i).Interface() //通过interface方法来取出这个字段所对应的值
@@ -36,6 +36,13 @@ func main() {
 
 		fmt.Printf("%6s:%v =%v,tag:%v\n", f.Name, f.Type, val, f.Tag) //Id:int =1,tag:json:"id" form:"id"
 	}
+	//遍历 ValueOf 值
+
+	for i := 0; i < v.NumField(); i++ {
+		f := v.Field(i)
+		fmt.Printf("%s %s = %v \n", f.Type().Field(i).Name, f.Type(), f.Interface())
+	}
+
 	for i := 0; i < t.NumMethod(); i++ { //这里同样通过t.NumMethod来获取它拥有的方法的数量，来决定循环的次数
 		m := t.Method(i)
 		fmt.Printf("%6s:%v\n", m.Name, m.Type)

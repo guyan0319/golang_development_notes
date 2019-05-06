@@ -21,12 +21,17 @@ func (u Users) Login() {
 }
 
 func main() {
-
+	//ch := make(chan string, 3)
+	//fmt.Println(ch)
+	//vv := runtime.Getchan()
 	u := &Users{Id: 12}
-	t := reflect.TypeOf(u)
-	//ch := make(chan string)
+	//t := reflect.TypeOf(u)
+	v := reflect.ValueOf(u)
+	//fmt.Printf("%+v\n", v)
+
 	//t := reflect.TypeOf(ch)
-	public.Examiner(t, 0)
+	public.Examiner(v, 0)
+	//public.Examiner(t, 0)
 	//t := reflect.TypeOf(u).Elem() //反射出一个interface{}的类型,main.User
 	//v := reflect.ValueOf(u).Elem()
 	//for i := 0; i < t.NumField(); i++ { //通过索引来取得它的所有字段，这里通过t.NumField来获取它多拥有的字段数量，同时来决定循环的次数
