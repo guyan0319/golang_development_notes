@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"time"
 )
 
 func goRoutineA(a <-chan string) {
@@ -16,8 +17,9 @@ func goRoutineB(a chan string, data string) {
 
 func main() {
 
-	//ch := make(chan string)
-	//go goRoutineB(ch, "hello")
-	//go goRoutineA(ch)
-	//time.Sleep(time.Second * 1)
+	ch := make(chan string, 3)
+
+	go goRoutineB(ch, "hello")
+	go goRoutineA(ch)
+	time.Sleep(time.Second * 1)
 }
