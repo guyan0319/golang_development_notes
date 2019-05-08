@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"reflect"
 	"runtime"
+	"unsafe"
 )
 
 type Users struct {
@@ -27,6 +28,7 @@ func (u Users) Login() {
 }
 
 func main() {
+
 	ch := make(chan string, 3)
 	fmt.Println(ch)
 	vv := runtime.Getchan()
@@ -54,5 +56,35 @@ func main() {
 	//
 	//	fmt.Printf("%v:%+v =%v\n", f.Name, f.Type, val)
 	//}
+
+}
+
+func fun1() {
+	//a := 2
+	//c := (*string)(unsafe.Pointer(&a))
+	//*c = "44"
+	//fmt.Println(c)
+	//fmt.Println(*c)
+	a := "22"
+	c := (*int)(unsafe.Pointer(&a))
+	*c = 44
+	fmt.Println(c)
+	fmt.Println(&c)
+	b := &c
+	fmt.Println(&b)
+}
+
+func fun2() {
+	a := "654"
+	c := (*string)(unsafe.Pointer(&a))
+	*c = "44"
+	fmt.Println(c)
+	fmt.Println(*c)
+}
+func fun3() {
+	a := 3
+	c := *(*string)(unsafe.Pointer(&a))
+	c = "445"
+	fmt.Println(c)
 
 }

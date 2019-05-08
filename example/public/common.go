@@ -20,6 +20,15 @@ func Explicit(v reflect.Value, depth int) {
 					fmt.Printf(strings.Repeat("\t", depth+1)+"%s %s : \n", t.Field(i).Name, f.Type())
 					Explicit(f, depth+2)
 				} else {
+					if t.Field(i).Name == "buf" {
+						//fmt.Println(unsafe.Alignof(f))
+						//p := (uintptr)(f.Pointer())
+						fmt.Println(f.UnsafeAddr())
+						fmt.Printf("%+p", f.UnsafeAddr())
+						//p := (*int)(unsafe.Pointer(&f))
+						//fmt.Println(f.Kind())
+
+					}
 					if f.CanInterface() {
 						fmt.Printf(strings.Repeat("\t", depth+1)+"%s %s : %v \n", t.Field(i).Name, f.Type(), f.Interface())
 					} else {
