@@ -23,8 +23,8 @@ func Explicit(v reflect.Value, depth int) {
 					if t.Field(i).Name == "buf" {
 						//fmt.Println(unsafe.Alignof(f))
 						//p := (uintptr)(f.Pointer())
-						fmt.Println(f.UnsafeAddr())
-						fmt.Printf("%+p", f.UnsafeAddr())
+						//fmt.Println(f.UnsafeAddr())
+						//fmt.Printf("%+p", f.UnsafeAddr())
 						//p := (*int)(unsafe.Pointer(&f))
 						//fmt.Println(f.Kind())
 

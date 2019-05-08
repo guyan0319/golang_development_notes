@@ -29,7 +29,7 @@ func (u Users) Login() {
 
 func main() {
 
-	ch := make(chan string, 3)
+	ch := make(chan int, 3)
 	fmt.Println(ch)
 	vv := runtime.Getchan()
 	v := reflect.ValueOf(vv)
