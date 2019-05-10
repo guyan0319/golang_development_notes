@@ -1,10 +1,8 @@
 package main
 
 import (
-	"example/example/public"
 	"fmt"
 	"reflect"
-	"runtime"
 	"unsafe"
 )
 
@@ -28,13 +26,19 @@ func (u Users) Login() {
 }
 
 func main() {
-
-	ch := make(chan int, 3)
-	fmt.Println(ch)
-	vv := runtime.Getchan()
-	v := reflect.ValueOf(vv)
-
-	public.Explicit(v, 0)
+	var a map[int]int
+	a = make(map[int]int, 3)
+	a[0] = 3
+	//a := [3]int{12}
+	b := reflect.ValueOf(a)
+	fmt.Println(b)
+	fmt.Printf("%+v", b)
+	//ch := make(chan int, 3)
+	//fmt.Println(ch)
+	//vv := runtime.Getchan()
+	//v := reflect.ValueOf(vv)
+	//
+	//public.Explicit(v, 0)
 	//fmt.Printf("%+v", v)
 	//m := map[int]string{1: "abc"}
 	//s := &Sfrom{Area: "beijing"}

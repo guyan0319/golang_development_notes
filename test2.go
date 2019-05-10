@@ -1,7 +1,10 @@
 package main
 
 import (
+	"example/example/public"
 	"fmt"
+	"reflect"
+	"runtime"
 	"time"
 )
 
@@ -15,18 +18,31 @@ func goRoutineB(b chan int) {
 }
 func goRoutineC(ch chan int, i int) {
 	ch <- i
-	ch <- 5
 }
 func main() {
 	ch := make(chan int, 3)
 	//ch := make(chan int)
-	//go goRoutineA(ch)
-	//go goRoutineB(ch)
+	go goRoutineA(ch)
+	go goRoutineB(ch)
 	//go goRoutineC(ch, 3)
 	//go goRoutineC(ch, 4)
+	//go goRoutineC(ch, 5)
+	//go goRoutineC(ch, 6)
+	//go goRoutineC(ch, 4)
 	ch <- 3
-	val := <-ch
-	fmt.Println("goRoutineB  received the data", val)
+	ch <- 4
+	//ch <- 5
+	//ch <- 6
+	//ch <- 7
+
+	//val := <-ch
+	//fmt.Println("goRoutineB  received the data", val)
+	vv := runtime.Getchan()
+	v := reflect.ValueOf(vv)
+	public.Explicit(v, 0)
+	ww := runtime.Getwaitq()
+	w := reflect.ValueOf(ww)
+	public.Explicit(w, 0)
 	//ch <- 3
 	//ch <- 4
 	//ch <- 5
