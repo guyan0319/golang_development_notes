@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"reflect"
 	"unsafe"
 )
 
@@ -26,13 +25,13 @@ func (u Users) Login() {
 }
 
 func main() {
-	var a map[int]int
-	a = make(map[int]int, 3)
-	a[0] = 3
-	//a := [3]int{12}
-	b := reflect.ValueOf(a)
-	fmt.Println(b)
-	fmt.Printf("%+v", b)
+	//var a map[int]int
+	//a = make(map[int]int, 3)
+	//a[0] = 3
+	////a := [3]int{12}
+	//b := reflect.ValueOf(a)
+	//fmt.Println(b)
+	//fmt.Printf("%+v", b)
 	//ch := make(chan int, 3)
 	//fmt.Println(ch)
 	//vv := runtime.Getchan()
