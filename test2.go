@@ -21,9 +21,9 @@ func goRoutineC(ch chan int, i int) {
 }
 func main() {
 	fmt.Println("1")
-	ch := make(chan int, 3)
+	//ch := make(chan int, 3)
 	fmt.Println("2")
-	//ch := make(chan int)
+	ch := make(chan int)
 	//fmt.Println(ch)
 	//ch := make(chan int)
 	//go goRoutineA(ch)
@@ -33,14 +33,14 @@ func main() {
 	//go goRoutineC(ch, 5)
 	//go goRoutineC(ch, 6)
 	//go goRoutineC(ch, 4)
+
 	ch <- 3
 	//ch <- 4
 	//ch <- 5
 	//ch <- 6
 	//ch <- 7
-
-	//val := <-ch
-	//fmt.Println("goRoutineB  received the data", val)
+	val := <-ch
+	fmt.Println("goRoutineB  received the data", val)
 	vv := runtime.Getchan()
 	v := reflect.ValueOf(vv)
 	public.Explicit(v, 0)
