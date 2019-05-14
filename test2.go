@@ -18,15 +18,13 @@ func goRoutineC(ch chan int, i int) {
 	ch <- i
 }
 func main() {
-	fmt.Println("1")
 	//ch := make(chan int, 3)
-	fmt.Println("2")
 	ch := make(chan int)
 	//fmt.Println(ch)
 	//ch := make(chan int)
 	//go goRoutineA(ch)
 	//go goRoutineB(ch)
-	go goRoutineC(ch, 3)
+	//go goRoutineC(ch, 3)
 	//go goRoutineC(ch, 4)
 	//go goRoutineC(ch, 5)
 	//go goRoutineC(ch, 6)
