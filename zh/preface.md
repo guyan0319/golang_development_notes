@@ -120,7 +120,7 @@
 
 - 9.8 [Go 匿名函数和闭包](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.8.md)
 
-- 9.9 [Go  channel 实现机制分析](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.9.md)
+- 9.9 [Go  channel 实现原理分析](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.9.md)
 
   
 
