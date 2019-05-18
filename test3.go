@@ -32,7 +32,7 @@ func main() {
 			consumer(stop)
 		}(stop)
 	}
-	//waitForSignal()
+	waitForSignal()
 	close(stop)
 	fmt.Println("stopping all jobs!")
 	wg.Wait()
