@@ -124,6 +124,8 @@
 
 - 9.10 [Go Signal信号处理](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.10.md)
 
+- 9.11 [Go 并发控制](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.11.md)
+
   
 
   
