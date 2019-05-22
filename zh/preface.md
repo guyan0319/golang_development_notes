@@ -126,7 +126,7 @@
 
 - 9.11 [Go 并发控制](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.11.md)
 
-- 9.12 [Go context包的理解](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.12.md)
+- 9.12 [Go context包的分析](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.12.md)
 
   
 
