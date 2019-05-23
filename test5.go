@@ -6,44 +6,16 @@ import (
 )
 
 func main() {
-	t := time.NewTimer(time.Second * 2)
-	defer t.Stop()
-	ch := make(chan bool)
+	ch1 := make(chan int, 1)
+	ch1 <- 1
 	for {
 		select {
-		case <-t.C:
-			fmt.Println("timer running...")
-		case stop := <-ch:
-			if stop {
-				fmt.Println("timer Stop")
-				return
-			}
+		case e1 := <-ch1:
+			//如果ch1通道成功读取数据，则执行该case处理语句
+			fmt.Printf("1th case is selected. e1=%v\n", e1)
+		case <-time.After(time.Second * 2):
+			fmt.Println("Timed out")
 		}
-		// 需要重置Reset 使 t 重新开始计时
-		t.Reset(time.Second * 2)
 	}
-	time.Sleep(10 * time.Second)
-	ch <- true
-	close(ch)
-	//ticker := time.NewTicker(2 * time.Second)
-	//
-	//ch := make(chan bool)
-	//go func(ticker *time.Ticker) {
-	//	defer ticker.Stop()
-	//	for {
-	//		select {
-	//		case <-ticker.C:
-	//			fmt.Println("timer....")
-	//		case stop := <-ch:
-	//			if stop {
-	//				fmt.Println("Ticker2 Stop")
-	//				return
-	//			}
-	//		}
-	//	}
-	//}(ticker)
-	//
-	//time.Sleep(10 * time.Second)
-	//ch <- true
-	//close(ch)
+
 }
