@@ -98,6 +98,8 @@
 
 - 7.9 [中间件(Middleware )](https://github.com/guyan0319/golang_development_notes/blob/master/zh/7.9.md)
 
+- 7.10 [Redirect 重定向](https://github.com/guyan0319/golang_development_notes/blob/master/zh/7.10.md)
+
 - **缓存**
 
 - 8.1 [Go Redis连接池](https://github.com/guyan0319/golang_development_notes/blob/master/zh/8.1.md)

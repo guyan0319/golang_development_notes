@@ -1,29 +1,22 @@
 package main
 
 import (
-	"time"
-	"fmt"
+	"github.com/labstack/echo"
+	"net/http"
 )
 
-func main() {
+func HandleWelcome() func(c echo.Context) error {
+	return func(c echo.Context) error {
+		res := c.Response()
+		w := res.Writer
+		r := c.Request()
+		http.Redirect(w, r, "http://www.baidu.com", http.StatusFound) //跳转到百度
+		return nil
+	}
+}
 
-	ticker := time.NewTicker(2 * time.Second)
-	ch := make(chan bool)
-	go func(ticker *time.Ticker) {
-		defer ticker.Stop()
-		for {
-			select {
-			case <-ticker.C:
-				fmt.Println("Ticker running...")
-			case stop := <-ch:
-				if stop {
-					fmt.Println("Ticker Stop")
-					return
-				}
-			}
-		}
-	}(ticker)
-	time.Sleep(10 * time.Second)
-	ch <- true
-	close(ch)
+func main() {
+	e := echo.New()
+	e.GET("/hello", HandleWelcome())
+	e.Logger.Fatal(e.Start(":1323"))
 }
