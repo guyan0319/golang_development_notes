@@ -1,19 +1,20 @@
 package main
 
 import (
-	"fmt"
-	"os"
-	"os/signal"
+	"io/ioutil"
+	"log"
+	"net/http"
 )
 
-// 监听全部信号
+func sayHelloHandler(w http.ResponseWriter, r *http.Request) {
+	http.Redirect(w, r, "http://www.baidu.com", http.StatusFound) //重定向
+	content := []byte("hello world")
+	err := ioutil.WriteFile("test.txt", content, 0644)
+	if err != nil {
+		panic(err)
+	}
+}
 func main() {
-	//合建chan
-	c := make(chan os.Signal)
-	//监听所有信号
-	signal.Notify(c)
-	//阻塞直到有信号传入
-	fmt.Println("启动")
-	s := <-c
-	fmt.Println("退出信号", s)
+	http.HandleFunc("/", sayHelloHandler) //   设置访问路由
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
