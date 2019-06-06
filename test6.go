@@ -1,17 +1,19 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
-	"time"
+	"github.com/PuerkitoBio/goquery"
 	"github.com/tebeka/selenium"
 	"github.com/tebeka/selenium/chrome"
+	"time"
 )
 
 func main() {
 
 	const (
 		seleniumPath = `C:\Program Files (x86)\chromedriver\chromedriver.exe`
-		port            = 9515
+		port         = 9515
 	)
 
 	//如果seleniumServer没有启动，就启动一个seleniumServer所需要的参数，可以为空，示例请参见https://github.com/tebeka/selenium/blob/master/example_test.go
@@ -51,7 +53,6 @@ func main() {
 	//以上是设置浏览器参数
 	caps.AddChrome(chromeCaps)
 
-
 	// 调起chrome浏览器
 	w_b1, err := selenium.NewRemote(caps, fmt.Sprintf("http://localhost:%d/wd/hub", port))
 	if err != nil {
@@ -61,35 +62,68 @@ func main() {
 	//关闭一个webDriver会对应关闭一个chrome窗口
 	//但是不会导致seleniumServer关闭
 	defer w_b1.Quit()
-	err = w_b1.Get("https://zhuanlan.zhihu.com/p/37752206")
+	err = w_b1.Get("https://blog.csdn.net/guyan0319")
 	if err != nil {
 		fmt.Println("get page faild", err.Error())
 		return
 	}
-
-
-
-	// 重新调起chrome浏览器
-	w_b2, err := selenium.NewRemote(caps, fmt.Sprintf("http://localhost:%d/wd/hub", port))
+	//判断加载完成
+	jsRt, err := w_b1.ExecuteScript("return document.readyState", nil)
 	if err != nil {
-		fmt.Println("connect to the webDriver faild", err.Error())
+		fmt.Println("exe js err", err)
+	}
+	fmt.Println("jsRt", jsRt)
+	if jsRt != "complete" {
+		fmt.Println("网页加载未完成")
 		return
 	}
-	defer w_b2.Close()
-	//打开一个网页
-	err = w_b2.Get("https://www.toutiao.com/")
+	//获取网站内容
+	var frameHtml string
+	time.Sleep(1 * time.Second)
+	frameHtml, err = w_b1.PageSource()
 	if err != nil {
-		fmt.Println("get page faild", err.Error())
+		fmt.Println(err)
 		return
 	}
-	//打开一个网页
-	err = w_b2.Get("https://www.baidu.com/")
+
+	//解析html 文件
+	var doc *goquery.Document
+	doc, err = goquery.NewDocumentFromReader(bytes.NewReader([]byte(frameHtml)))
 	if err != nil {
-		fmt.Println("get page faild", err.Error())
+		fmt.Println(err)
 		return
 	}
+	doc.Find(".article-item-box").Each(func(index int, item *goquery.Selection) {
+		title := item.Text()
+		linkTag := item.Find("a")
+		link, _ := linkTag.Attr("href")
+		fmt.Printf("Post #%d: %s - %s\n", index, title, link)
+	})
+
+	//// 重新调起chrome浏览器
+	//w_b2, err := selenium.NewRemote(caps, fmt.Sprintf("http://localhost:%d/wd/hub", port))
+	//if err != nil {
+	//	fmt.Println("connect to the webDriver faild", err.Error())
+	//	return
+	//}
+	//defer w_b2.Close()
+	////打开一个网页
+	//err = w_b2.Get("https://www.toutiao.com/")
+	//if err != nil {
+	//	fmt.Println("get page faild", err.Error())
+	//	return
+	//}
+	////打开一个网页
+	//err = w_b2.Get("https://www.baidu.com/")
+	//if err != nil {
+	//	fmt.Println("get page faild", err.Error())
+	//	return
+	//}
 	//w_b就是当前页面的对象，通过该对象可以操作当前页面了
 	//........
-	time.Sleep(5* time.Minute)
+	time.Sleep(5 * time.Minute)
 	return
+}
+func openPage() {
+
 }

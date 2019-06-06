@@ -14,9 +14,9 @@ import (
 )
 
 func main() {
-	//url := "https://blog.csdn.net/guyan0319/article/details/90450958"
-	//b, _ := Fetch(url)
-	//fmt.Println(string(b))
+	url := "https://blog.csdn.net/guyan0319/article/details/90450958"
+	b, _ := Fetch(url)
+	fmt.Println(string(b))
 
 }
 
