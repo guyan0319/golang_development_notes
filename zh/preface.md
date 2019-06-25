@@ -46,7 +46,9 @@
 
 - 2.11 [new和make的区别](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.11.md)
 
-- 2.12 [Go 定时器NewTimer、NewTicker 和time.After](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.11.md)
+- 2.12 [Go 定时器NewTimer、NewTicker 和time.After](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.12.md)
+
+- 2.13 [Go 类型](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.13.md)
 
 - 3 **字符处理**
 
