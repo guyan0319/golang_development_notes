@@ -138,9 +138,8 @@
 
 #### 工具
 
-10. 1[Go socket通信](https://github.com/guyan0319/golang_development_notes/blob/master/zh/10.1.md)
-
-10.2  [grpc的Go服务端和PHP客户端实现](https://github.com/guyan0319/golang_development_notes/blob/master/zh/10.2.md)
+- 10.1[Go socket通信](https://github.com/guyan0319/golang_development_notes/blob/master/zh/10.1.md)
+- 10.2  [grpc的Go服务端和PHP客户端实现](https://github.com/guyan0319/golang_development_notes/blob/master/zh/10.2.md)
 
 
 **项目地址**：https://github.com/guyan0319/golang_development_notes
