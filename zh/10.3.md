@@ -4,6 +4,16 @@
 
 工具的使用很简单，需要简单的配置，即可运行生成proto文件。
 
+### 准备
+
+使用前需先安装依赖包go-sql-driver/mysql
+
+```
+$ go get -u github.com/go-sql-driver/mysql
+```
+
+
+
 ### 使用说明：
 
 ```
