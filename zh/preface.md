@@ -5,22 +5,15 @@
 ####    1.0 [**Go环境配置**](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.0.md)
 
 - 1.1 [Go安装](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.1.md)
-
 - 1.2 [目录结构](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.2.md)
-
 - 1.3 [Go命令](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.3.md)
-
 - 1.4 [开发工具](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.4.md)
-
 - 1.5 [版本控制（dep）](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.5.md)
-
 - 1.6 [Go 各版本特性](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.6.md)
-
 - 1.7 [调试工具Delve](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.7.md)
-
 - 1.8  [Go 性能测试工具PProf](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.8.md)
-
 - 1.9  [Go  单元测试和性能测试](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.9.md)
+- 1.10[Go 版本控制 Go Modules（官方推荐）](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.10.md)
 
 #### 2 语言基础
 
