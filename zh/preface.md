@@ -18,30 +18,19 @@
 #### 2 语言基础
 
 - 2.1 [hello word!](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.1.md)
-
 - 2.2 [数组](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.2.md)
-
 - 2.3 [切片](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.3.md)
-
 - 2.4 [map](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.4.md)
-
 - 2.5 [struct](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.5.md)
-
 - 2.6 [常量和变量](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.6.md)
-
 - 2.7 [流程控制](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.7.md)
-
 - 2.8 [Go 反射reflect](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.8.md)
-
 - 2.9 [Go 双向链表](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.9.md)
-
 - 2.10 [Go 指针](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.10.md)
-
 - 2.11 [new和make的区别](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.11.md)
-
 - 2.12 [Go 定时器NewTimer、NewTicker 和time.After](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.12.md)
-
 - 2.13 [Go 类型](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.13.md)
+- 2.14 [Go 之 interface接口理解](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.14.md)
 
 #### 3  字符处理
 
