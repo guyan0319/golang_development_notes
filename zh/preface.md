@@ -85,32 +85,19 @@
 #### 9  Go高级编程
 
 - 9.1 [函数可变数量参数传参](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.1.md)
-
 - 9.2 [深入理解nil](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.2.md)
-
 - 9.3 [指针内存分配详解](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.3.md)
-
 - 9.4 [Go 堆栈的理解](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.4.md)
-
 - 9.5 [Go  goroutine理解](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.5.md)
-
 - 9.6 [GO GC 垃圾回收机制](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.6.md)
-
 - 9.7 [GO 单例模式](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.7.md)
-
 - 9.8 [Go 匿名函数和闭包](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.8.md)
-
 - 9.9 [Go  channel 实现原理分析](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.9.md)
-
 - 9.10 [Go Signal信号处理](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.10.md)
-
 - 9.11 [Go 并发控制](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.11.md)
-
 - 9.12 [Go context包的分析](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.12.md)
-
 - 9.13 [Golang不同类型比较](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.13.md)
-
-  
+- 9.14 [Go 三个点(...)用法](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.14.md)
 
 #### 工具
 
