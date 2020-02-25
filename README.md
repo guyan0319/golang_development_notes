@@ -14,7 +14,7 @@ Golang version is V1.11.2
 
 
 
-![https://github.com/guyan0319/golang_development_notes/blob/master/images/qq.png?raw=true](https://github.com/guyan0319/golang_development_notes/blob/master/images/qq.png?raw=true)
+![](https://gitee.com/jason0319/golang_development_notes/raw/master/images/1.1.1.png)
 
 ## LICENSE
 
