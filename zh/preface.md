@@ -109,6 +109,7 @@
 #### 开源实例
 
 - 11.1 [go-admin 后台管理系统](https://github.com/guyan0319/go-admin)
+- [11.1.1 vue-element-admin 后台动态加载菜单](https://github.com/guyan0319/golang_development_notes/blob/master/zh/11.1.1.md)
 
 **项目地址**：https://github.com/guyan0319/golang_development_notes
 
