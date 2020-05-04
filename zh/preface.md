@@ -75,6 +75,7 @@
 - 7.9 [中间件(Middleware )](https://github.com/guyan0319/golang_development_notes/blob/master/zh/7.9.md)
 - 7.10 [Redirect 重定向](https://github.com/guyan0319/golang_development_notes/blob/master/zh/7.10.md)
 - 7.11 [Golang 下载文件](https://github.com/guyan0319/golang_development_notes/blob/master/zh/7.11.md)
+- 7.12 [golang之数据验证validator](https://github.com/guyan0319/golang_development_notes/blob/master/zh/7.12.md)
 
 #### 8  缓存
 
