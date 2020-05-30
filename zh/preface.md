@@ -47,10 +47,9 @@
 #### 4 包（package）
 
 - 4.1 [自定义包（package）](https://github.com/guyan0319/golang_development_notes/blob/master/zh/4.1.md)
-
 - 4.2  [import](https://github.com/guyan0319/golang_development_notes/blob/master/zh/4.2.md)
-
 - 4.3 [模板(text/template)](https://github.com/guyan0319/golang_development_notes/blob/master/zh/4.3.md)
+- 4.4 [ golang之JWT实现](https://github.com/guyan0319/golang_development_notes/blob/master/zh/4.4.md)
 
 #### 5 数据库
 
