@@ -113,6 +113,10 @@
 - 11.1.2 [vue-element-admin 上传图片慢问题处理](https://github.com/guyan0319/golang_development_notes/blob/master/zh/11.1.2.md)
 - 12.1 [golang 单点登录系统（go-sso）](https://github.com/guyan0319/go-sso)
 
+#### **其他**
+
+- 13.1 [Go1.14版本 新特性](https://github.com/guyan0319/golang_development_notes/blob/master/zh/13.1.md)
+
 **项目地址**：https://github.com/guyan0319/golang_development_notes
 
 **参考资料**：https://golang.org/doc/
