@@ -60,6 +60,7 @@
 #### 6  web 框架
 
 - 6.1 [Go之web框架gin](https://github.com/guyan0319/golang_development_notes/blob/master/zh/6.1.md)
+- 6.2 [Go之rpc框架rpcx](https://github.com/guyan0319/golang_development_notes/blob/master/zh/6.2.md)
 
 #### 7  web 服务
 
