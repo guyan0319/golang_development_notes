@@ -110,9 +110,10 @@
 #### 开源实例
 
 - 11.1 [go-admin 后台管理系统](https://github.com/guyan0319/go-admin)
-- [11.1.1 vue-element-admin 后台动态加载菜单](https://github.com/guyan0319/golang_development_notes/blob/master/zh/11.1.1.md)
+- 11.1.1 [ vue-element-admin 后台动态加载菜单](https://github.com/guyan0319/golang_development_notes/blob/master/zh/11.1.1.md)
 - 11.1.2 [vue-element-admin 上传图片慢问题处理](https://github.com/guyan0319/golang_development_notes/blob/master/zh/11.1.2.md)
-- 12.1 [golang 单点登录系统（go-sso）](https://github.com/guyan0319/go-sso)
+- 11.2 [golang 单点登录系统（go-sso）](https://github.com/guyan0319/go-sso)
+- 11.3[gin websocket 一对一聊天](https://github.com/guyan0319/golang_development_notes/blob/master/zh/11.3.md)
 
 #### **其他**
 
