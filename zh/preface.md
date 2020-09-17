@@ -35,14 +35,11 @@
 #### 3  字符处理
 
 - 3.1 [判断字符类型](https://github.com/guyan0319/golang_development_notes/blob/master/zh/3.1.md)
-
 - 3.2 [类型转换](https://github.com/guyan0319/golang_development_notes/blob/master/zh/3.2.md)
-
 - 3.3 [json处理](https://github.com/guyan0319/golang_development_notes/blob/master/zh/3.3.md)
-
 - 3.4 [字符串处理](https://github.com/guyan0319/golang_development_notes/blob/master/zh/3.4.md)
-
 - 3.5 [GO 正则表达式](https://github.com/guyan0319/golang_development_notes/blob/master/zh/3.5.md)
+- 3.6 [Go 中文和unicode字符之间转换](https://github.com/guyan0319/golang_development_notes/blob/master/zh/3.6.md)
 
 #### 4 包（package）
 
