@@ -51,8 +51,8 @@
 #### 5 数据库
 
 - 5.1 [mysql（go-sql-driver/mysql）](https://github.com/guyan0319/golang_development_notes/blob/master/zh/5.1.md)
-
-- 5.2 [Go语言 orm库](https://github.com/guyan0319/golang_development_notes/blob/master/zh/5.2.md)
+- 5.2 [Go语言 orm库-xorm](https://github.com/guyan0319/golang_development_notes/blob/master/zh/5.2.md)
+- 5.3 [Go语言 orm库-gorm](https://github.com/guyan0319/golang_development_notes/blob/master/zh/5.3.md)
 
 #### 6  web 框架
 
