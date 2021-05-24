@@ -78,8 +78,6 @@
 
 - 8.1 [Go Redis连接池](https://github.com/guyan0319/golang_development_notes/blob/master/zh/8.1.md)
 
-  
-
 #### 9  Go高级编程
 
 - 9.1 [函数可变数量参数传参](https://github.com/guyan0319/golang_development_notes/blob/master/zh/9.1.md)
@@ -112,7 +110,8 @@
 - 11.1.1 [ vue-element-admin 后台动态加载菜单](https://github.com/guyan0319/golang_development_notes/blob/master/zh/11.1.1.md)
 - 11.1.2 [vue-element-admin 上传图片慢问题处理](https://github.com/guyan0319/golang_development_notes/blob/master/zh/11.1.2.md)
 - 11.2 [golang 单点登录系统（go-sso）](https://github.com/guyan0319/go-sso)
-- 11.3[gin websocket 一对一聊天](https://github.com/guyan0319/golang_development_notes/blob/master/zh/11.3.md)
+- 11.3 [gin websocket 一对一聊天](https://github.com/guyan0319/golang_development_notes/blob/master/zh/11.3.md)
+- 11.4 [[go-websocket 分布式IM](https://github.com/guyan0319/go-websocket)]
 
 #### **其他**
 
