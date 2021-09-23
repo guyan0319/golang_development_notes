@@ -31,6 +31,7 @@
 - 2.12 [Go 定时器NewTimer、NewTicker 和time.After](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.12.md)
 - 2.13 [Go 类型](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.13.md)
 - 2.14 [Go 之 interface接口理解](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.14.md)
+- 2.15 [Go之time包用法](https://github.com/guyan0319/golang_development_notes/blob/master/zh/2.15.md)
 
 #### 3  字符处理
 
