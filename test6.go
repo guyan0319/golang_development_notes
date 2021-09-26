@@ -1,120 +1,47 @@
 package main
 
-import (
-	"fmt"
-	"time"
-)
+import "fmt"
 
+var defaultStuffClient = stuffClient{
+	retries: 3,
+	timeout: 2,
+}
+type StuffClientOption func(*stuffClient)
+func WithRetries(r int) StuffClientOption {
+	return func(o *stuffClient) {
+		o.retries = r
+	}
+}
+func WithTimeout(t int) StuffClientOption {
+	return func(o *stuffClient) {
+		o.timeout = t
+	}
+}
+type StuffClient interface {
+	DoStuff() error
+}
+type stuffClient struct {
+	conn    Connection
+	timeout int
+	retries int
+}
+type Connection struct{}
+func NewStuffClient(conn Connection, opts ...StuffClientOption) StuffClient {
+	client := defaultStuffClient
+	for _, o := range opts {
+		o(&client)
+	}
+
+	client.conn = conn
+	return client
+}
+func (c stuffClient) DoStuff() error {
+	return nil
+}
 func main() {
-	t:=time.Now()
-	fmt.Println(t)//获取当前时间2021-09-23 10:55:44.831571 +0800 CST m=+0.000090412
-	fmt.Println(t.Unix())//获取当前时间时间戳 1632366278
-	fmt.Println(t.UnixMilli())//获取当前时间毫秒 1632366278605
-	fmt.Println(t.UnixMicro())//获取当前时间微秒 1632366278605122
-	fmt.Println(t.UnixNano())//获取当前时间时纳秒 1632366278605122000
-	fmt.Println(t.Hour())//获取当前小时 10
-	fmt.Println(t.Day())//获取当前天 23
-	fmt.Println(t.Weekday())//获取当前周Thursday
-	fmt.Println(t.ISOWeek())//获取当前周2021 38
-
-	//格式化当前时间表示
-	fmt.Println(t.String())//字符型
-	fmt.Println(t.Format("2006-01-02 15:04:05"))//2021-09-23 11:12:42
-	fmt.Println(t.Format("2006-01-02"))//2021-09-23
-	fmt.Println(t.Format("15:04:05"))//11:12:42
-
-	//指定时间戳转换
-	fmt.Println(time.Unix(1632366278, 0).Format("2006-01-02 15:04:05"))//2021-09-23 11:04:38
-	//指定时间转时间戳
-	tm2, _ := time.Parse("2006-01-02 15:04:05", "2021-09-23 11:04:38")
-	fmt.Println( tm2.Unix())//1632395078
-
-	//"2021-09-08T08:18:46+08:00" 转2021-09-08 08:18:46
-	t, _= time.Parse(time.RFC3339, "2021-09-08T08:18:46+08:00")
-	fmt.Println(t.Format("2006-01-02 15:04:05"))
-	//2021-09-07T17:01:34.182659088Z 转2021-09-07 17:01:34
-	t, _= time.Parse(time.RFC3339Nano, "2021-09-07T17:01:34.182659088Z")
-	fmt.Println(t.Format("2006-01-02 15:04:05"))
-	//其他格式类似可参考
-
-    //ANSIC       = "Mon Jan _2 15:04:05 2006"
-    //UnixDate    = "Mon Jan _2 15:04:05 MST 2006"
-    //RubyDate    = "Mon Jan 02 15:04:05 -0700 2006"
-    //RFC822      = "02 Jan 06 15:04 MST"
-    //RFC822Z     = "02 Jan 06 15:04 -0700" // 使用数字表示时区的RFC822
-    //RFC850      = "Monday, 02-Jan-06 15:04:05 MST"
-    //RFC1123     = "Mon, 02 Jan 2006 15:04:05 MST"
-    //RFC1123Z    = "Mon, 02 Jan 2006 15:04:05 -0700" // 使用数字表示时区的RFC1123
-    //RFC3339     = "2006-01-02T15:04:05Z07:00"
-    //RFC3339Nano = "2006-01-02T15:04:05.999999999Z07:00"
-    //Kitchen     = "3:04PM"
-    //// 方便的时间戳
-    //Stamp      = "Jan _2 15:04:05"
-    //StampMilli = "Jan _2 15:04:05.000"
-    //StampMicro = "Jan _2 15:04:05.000000"
-    //StampNano  = "Jan _2 15:04:05.000000000"
-
-     //设置时区 Location
-	//默认UTC
-	loc, _ := time.LoadLocation("")
-	// 服务器设定的时区，一般为CST
-	//loc, _ := time.LoadLocation("Local")
-	//loc, _ := time.LoadLocation("Asia/Shanghai")
-	t.In(loc).Format("2006-01-02 15:04:05");
-
-	//1.5s后
-	now := time.Now()
-	tp, _ := time.ParseDuration("1.5s")
-	fmt.Println(tp,tp.Truncate(1000), tp.Seconds(), tp.Nanoseconds())
-	m1 := now.Add(tp)
-	fmt.Println(m1)//2021-09-23 14:30:42.006213 +0800 CST m=+1.500352171
-
-	//1个小时前
-	tp, _ = time.ParseDuration("-1h")
-
-	m1 = now.Add(tp)
-	fmt.Println(m1)//2021-09-23 13:30:40.506213 +0800 CST m=-3599.999647829
-	//休眠时间
-	//time.Sleep(time.Duration(10) * time.Second)
-
-	// func After(d Duration) <-chan Time  非阻塞,可用于延迟
-	//time.After(time.Duration(10) * time.Second)
-
-
-
-	// func Since(t Time) Duration 两个时间点的间隔
-	start := time.Now()
-	fmt.Println(time.Since(start))   // 等价于 Now().Sub(t)， 可用来计算一段业务的消耗时间
-
-	//func Until(t Time) Duration     //  等价于 t.Sub(Now())，t与当前时间的间隔
-
-
-	time3 := "2021-03-20 08:50:29"
-	time4 := "2021-03-20 08:50:29"
-	//先把时间字符串格式化成相同的时间类型
-	t3, _ := time.Parse("2006-01-02 15:04:05", time3)
-	t4, _ := time.Parse("2006-01-02 15:04:05", time4)
-
-	fmt.Println(t3.Equal(t4)) //true
-
-
-	now = time.Now()
-	//Ticker 类型包含一个 channel，有时我们会遇到每隔一段时间执行的业务(比如设置心跳时间等)，就可以用它来处理，这是一个重复的过程
-
-	// 无法取消
-	//tick := time.Tick(1 * time.Minute)
-	//for _ = range tick {
-	//	// do something
-	//}
-	//NewTicker返回一个新的Ticker，该Ticker包含一个通道字段，并会每隔时间段d就向该通道发送当时的时间。它会调整时间间隔或者丢弃tick信息以适应反应慢的接收者。如果d<=0会panic。关闭该Ticker可以释放相关资源。
-	// 可通过调用ticker.Stop取消
-	//创建一个周期性的定时器
-	//设置定时器为3秒
-	timer := time.NewTimer(3 * time.Second)
-	fmt.Println("当前时间为:", time.Now())
-
-	t = <-timer.C //从定时器拿数据
-	fmt.Println("当前时间为:", t)
-	timer.Stop()//停止
-
+conn:=Connection{}
+ret:=NewStuffClient(conn)
+fmt.Println(ret)//{{} 2 3}
+ret=NewStuffClient(conn,WithTimeout(5))
+fmt.Println(ret)//{{} 2 5}
 }
