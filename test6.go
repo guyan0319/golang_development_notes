@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 var defaultStuffClient = stuffClient{
 	retries: 3,
@@ -39,9 +41,11 @@ func (c stuffClient) DoStuff() error {
 	return nil
 }
 func main() {
-conn:=Connection{}
-ret:=NewStuffClient(conn)
-fmt.Println(ret)//{{} 2 3}
-ret=NewStuffClient(conn,WithTimeout(5))
-fmt.Println(ret)//{{} 2 5}
+	sum := 0
+	for i := 0; i <= 100; i++ {
+		fmt.Println("fasdfasfsd",i)
+		sum += i
+	}
+
+	//time.Sleep(time.Millisecond)
 }
