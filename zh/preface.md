@@ -48,6 +48,7 @@
 - 4.2  [import](https://github.com/guyan0319/golang_development_notes/blob/master/zh/4.2.md)
 - 4.3 [模板(text/template)](https://github.com/guyan0319/golang_development_notes/blob/master/zh/4.3.md)
 - 4.4 [ golang之JWT实现](https://github.com/guyan0319/golang_development_notes/blob/master/zh/4.4.md)
+- 4.5 [ Go 操作kafka包sarama ](https://github.com/guyan0319/golang_development_notes/blob/master/zh/4.5.md)
 
 #### 5 数据库
 
