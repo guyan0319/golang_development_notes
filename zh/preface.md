@@ -2,7 +2,7 @@
 
 
 
-####    1.0 [**Go环境配置**](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.0.md)
+####    1.0 [**Go环境配置**](/golang_development_notes/blob/master/zh/1.0.md)
 
 - 1.1 [Go安装](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.1.md)
 - 1.2 [目录结构](https://github.com/guyan0319/golang_development_notes/blob/master/zh/1.2.md)
