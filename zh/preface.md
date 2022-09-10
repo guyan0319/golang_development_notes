@@ -62,6 +62,7 @@
 
 - 6.1 [Go之web框架gin](/zh/6.1.md)
 - 6.2 [Go之rpc框架rpcx](/zh/6.2.md)
+- 6.3 [Golang之微服务http框架hertz](/zh/6.3.md)
 
 #### 7  web 服务
 
