@@ -57,6 +57,7 @@
 - 5.1 [mysql（go-sql-driver/mysql）](/zh/5.1.md)
 - 5.2 [Go语言 orm库-xorm](/zh/5.2.md)
 - 5.3 [Go语言 orm库-gorm](/zh/5.3.md)
+- 5.4 [Go操作mongodb](/zh/5.4.md)
 
 #### 6  web 框架
 
