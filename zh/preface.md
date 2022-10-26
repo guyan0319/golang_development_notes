@@ -122,6 +122,7 @@
 #### **其他**
 
 - 13.1 [Go1.14版本 新特性](/zh/13.1.md)
+- 13.2 [Go-map、切片、数组循环常见问题总结](/zh/13.2.md)
 
 **项目地址**：https://github.com/guyan0319/golang_development_notes
 
