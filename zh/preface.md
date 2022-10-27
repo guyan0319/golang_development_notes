@@ -33,6 +33,7 @@
 - 2.14 [Go 之 interface接口理解](/zh/2.14.md)
 - 2.15 [Go之time包用法](/zh/2.15.md)
 - 2.16 [Go 之iota](/zh/2.16.md)
+- 2.17 [Go语言sync.Map](/zh/2.17.md)
 
 #### 3  字符处理
 
