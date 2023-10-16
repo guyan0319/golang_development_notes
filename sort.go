@@ -110,11 +110,6 @@ func partion(nums []int, left, right int)  int {
 		}
 	}
 	return left
-
-
-
-
-
 }
 
 

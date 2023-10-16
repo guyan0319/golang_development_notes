@@ -123,6 +123,7 @@
 - 11.2 [golang 单点登录系统（go-sso）](https://github.com/guyan0319/go-sso)
 - 11.3 [gin websocket 一对一聊天](/zh/11.3.md)
 - 11.4 [go-websocket 分布式IM](https://github.com/guyan0319/go-websocket)
+- 11.5 [go-vue-admin后台管理系统](https://github.com/guyan0319/go-vue-admin)
 
 #### **其他**
 
