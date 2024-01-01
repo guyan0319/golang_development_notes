@@ -55,6 +55,9 @@
 - 4.6 [ Go 操作elasticsearch ](/zh/4.6.md)
 - 4.7 [ Go 官方依赖注入工具wire](/zh/4.7.md)
 - 4.8 [ golang 随机数](/zh/4.8.md)
+- 4.9 [ Go 处理pdf文件](/zh/4.9.md)
+- 4.10 [ Go 处理excel文件](/zh/4.10.md)
+
 
 
 #### 5 数据库
