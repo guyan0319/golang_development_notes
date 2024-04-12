@@ -15,6 +15,8 @@ type HandlerTypeString func() string
 type HandlerTypeError func(interface{}) error
 
 func main() {
+
+	
 	var i interface{}
 	i = "string"
 	fmt.Println(i)
