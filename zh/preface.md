@@ -58,8 +58,10 @@
 - 4.9 [ Go 处理pdf文件](/zh/4.9.md)
 - 4.10 [ Go 处理excel文件](/zh/4.10.md)
 - 4.11 [ Go 处理word文件](/zh/4.11.md)
-- 4.12 [Go 处理markdown文件](/zh/4.12.md)
-- 4.13 [Go 多张图片合成gif动态图](/zh/4.13.md)
+- 4.12 [ Go 处理markdown文件](/zh/4.12.md)
+- 4.13 [ Go 多张图片合成gif动态图](/zh/4.13.md)
+- 4.14 [ Go 数据复制 copier](/zh/4.14.md)
+- 4.15 [gotests](/zh/4.15.md)
 
 #### 5 数据库
 
